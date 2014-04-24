@@ -1,0 +1,9 @@
+[client]
+host=localhost
+user=root
+password=******
+
+[client<hostname>]
+host=<hostname>
+user=root
+password=******
