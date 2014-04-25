@@ -7,7 +7,7 @@ timestamp=`date +%Y%m%d`
 host=<hostname>
 
 ## Define databases to backup
-databases="<database(s)>"
+DATABASES=( <db1> <db2> <db3> <...> )
 
 working_dir="/home/backups"
 log_dir="${working_dir}/log"
@@ -23,7 +23,7 @@ fi
 ## Clean up previous dumps
 ## I am just keeping the previous dump
 ## More can be kept by appending a timestamp
-for database in $databases
+for database in "${DATABASES[@]}"
 do
    if [ -f ${dumpdir}/${database}.sql.gz ]
    then
@@ -32,7 +32,7 @@ do
 done
 
 ## Do the dumps and compress the file
-for database in $databases
+for database in "${DATABASES[@]}"
 do
    echo "==== `date` ====" >> ${log_dir}/${database}.log
    echo "`date +%H:%M` - Starting backup of $database" >> ${log_dir}/${database}.log
