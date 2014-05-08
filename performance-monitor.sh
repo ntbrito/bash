@@ -1,3 +1,5 @@
+## Work in progress ##
+
 #!/bin/bash
 
 day=`date +%Y-%m-%d" "%H:%M`
