@@ -45,9 +45,9 @@ function mytop {
    echo -e "=== \n" >> $perform_log
 }
 
-## List of processess
+## List of processes
 function myps {
-   echo "== List of processess $day ==" >> $ps_log
+   echo "== List of processes $day ==" >> $ps_log
 
    if [ ! $THREADS ]
    then
