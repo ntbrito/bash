@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 
-touch test-file
+touch /tmp/test-file
